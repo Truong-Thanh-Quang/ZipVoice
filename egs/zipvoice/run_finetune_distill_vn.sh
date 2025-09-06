@@ -20,3 +20,5 @@ python3 -m zipvoice.bin.train_zipvoice_distill \
     --train-manifest data/fbank/custom-finetune_cuts_train.jsonl.gz \
     --dev-manifest data/fbank/custom-finetune_cuts_dev.jsonl.gz \
     --start-epoch 1
+
+curl --location 'https://n8n.zstackai.com/webhook/b427eda3-dc06-4278-bc4e-3682adfa8c95?program=ZipVoice'
