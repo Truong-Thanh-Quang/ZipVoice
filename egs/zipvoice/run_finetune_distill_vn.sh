@@ -18,4 +18,5 @@ python3 -m zipvoice.bin.train_zipvoice_distill \
     --distill-stage first \
     --exp-dir exp/zipvoice_distill_1stage \
     --train-manifest data/fbank/custom-finetune_cuts_train.jsonl.gz \
-    --dev-manifest data/fbank/custom-finetune_cuts_dev.jsonl.gz
+    --dev-manifest data/fbank/custom-finetune_cuts_dev.jsonl.gz \
+    --start-epoch 1
