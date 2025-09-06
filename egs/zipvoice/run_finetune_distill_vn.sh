@@ -4,10 +4,10 @@
 export PYTHONPATH=../../:$PYTHONPATH
 
 python3 -m zipvoice.bin.train_zipvoice_distill \
-    --world-size 2 \
+    --world-size 1 \
     --use-fp16 1 \
     --num-iters 60000 \
-    --max-duration 60 \
+    --max-duration 340 \
     --base-lr 0.0005 \
     --tokenizer espeak \
     --lang vi \
