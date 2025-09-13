@@ -583,7 +583,7 @@ def main():
             sampling_rate=params.sampling_rate,
         )
     else:
-        generate_sentence(
+        metrics = generate_sentence(
             save_path=params.res_wav_path,
             prompt_text=params.prompt_text,
             prompt_wav=params.prompt_wav,
@@ -601,6 +601,7 @@ def main():
             feat_scale=params.feat_scale,
             sampling_rate=params.sampling_rate,
         )
+        logging.info(f"Generation completed - Total time: {metrics['t']:.2f}s, RTF: {metrics['rtf']:.4f}")
     logging.info("Done")
 
 

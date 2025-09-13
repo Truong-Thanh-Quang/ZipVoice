@@ -1042,6 +1042,7 @@ def run(rank, world_size, args):
         dev_cuts = datamodule.dev_libritts_cuts()
     else:
         assert params.dataset == "custom"
+        print(f"params={params}")
         train_cuts = datamodule.train_custom_cuts(params.train_manifest)
         train_cuts = train_cuts.filter(_remove_short_and_long_utt)
         dev_cuts = datamodule.dev_custom_cuts(params.dev_manifest)
